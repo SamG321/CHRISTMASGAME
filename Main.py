@@ -34,6 +34,9 @@ class Main:
         self.font = pygame.font.SysFont(None, 48)
         self.cooldown = 60
 
+        self.bg = pygame.image.load("assets/background.png")
+        self.bgx = 0
+
         self.titleFont = pygame.font.SysFont(None, 100)
         self.drop_cooldown = 0
         self.amount_of_frames = 0
@@ -131,7 +134,11 @@ class Main:
             
             # if the game is running
             if self.play == True:
-                self.screen.fill((11, 20, 31))
+                self.screen.blit(self.bg, (self.bgx, 0))
+                self.screen.blit(self.bg, (1920+self.bgx, 0))
+                self.bgx=self.bgx-1
+                if self.bgx == -1920:
+                    self.bgx=0
 
                 self.scroll = 0
 
