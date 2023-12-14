@@ -102,7 +102,7 @@ class Main:
         self.exitButtonRect = self.exitButton.get_rect()
         w2, h2 = self.exitButtonRect.size
         self.exitButtonRect.x = int(1920/2-(w2/2))
-        self.exitButtonRect.y = 1080-h2-50
+        self.exitButtonRect.y = 1080-h2-25
 
         self.introBackground = pygame.image.load("assets/intro_background.png").convert()
         self.playButton = pygame.image.load("assets/intro_play.png").convert_alpha()
@@ -113,7 +113,7 @@ class Main:
         self.playRect = self.playButton.get_rect()
         w2,h2 = self.playRect.size
         self.playRect.x = int((w/2)-(w2/2))
-        self.playRect.y = 700
+        self.playRect.y = 600
 
         self.settings = False
         self.settingsIconRect = self.settingsIcon.get_rect()
